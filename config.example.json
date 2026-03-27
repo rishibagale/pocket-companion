@@ -1,0 +1,12 @@
+{
+  "voice": "Luna",
+  "model": "gemma3:1b",
+  "language": "en",
+  "system_prompt": "You are a helpful voice AI companion. Always reply in 1-2 short spoken sentences. Never use bullet points, asterisks, markdown, lists, or headers. Speak naturally and directly. Keep every response under 30 words.",
+  "memory_turns": 20,
+  "tts_speed": 1.0,
+  "stt_model": "base.en",
+  "silence_threshold": 0.01,
+  "silence_seconds": 1.2,
+  "sample_rate": 16000
+}
