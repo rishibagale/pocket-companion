@@ -8,15 +8,31 @@ Fully offline voice AI companion — speak naturally, get spoken replies. Runs o
 
 ![Demo](demo.gif)
 
-## Quick start
+## Quick start (1-Click Setup)
 
+For compact / low-memory devices (2GB - 4GB RAM), we provide a one-shot setup script which fetches the recommended `gemma3:1b` model, the STT models, and the TTS models automatically.
+
+### Windows
+```batch
+git clone https://github.com/rishibagale/pocket-companion
+cd pocket-companion
+setup.bat
+```
+
+### Linux / macOS
 ```bash
 git clone https://github.com/rishibagale/pocket-companion
 cd pocket-companion
+chmod +x setup.sh
+./setup.sh
+```
+
+**Manual Installation:**
+```bash
 pip install -r requirements.txt
 pip install https://github.com/KittenML/KittenTTS/releases/download/0.8.1/kittentts-0.8.1-py3-none-any.whl
-ollama pull gemma3:1b
 cp config.example.json config.json
+python download_models.py
 python main.py
 ```
 
@@ -30,6 +46,21 @@ Pocket Companion uses a local speech-to-text engine to transcribe audio, securel
 - **Python:** 3.12+
 - **Ollama:** Installed and running locally
 - **Hardware Minimum:** 2GB RAM (see model recommendations below)
+
+## IoT Device Compatibility
+
+This project works natively on "heavy" IoT edge devices (Single Board Computers) since the combined offline models take ~1.2 GB RAM, but the models are far too large to execute on microcontrollers. 
+
+**✅ Supported IoT Devices:** 
+Requires an SBC with a 64-bit architecture (ARM64) and at least 2GB RAM running Linux.
+- Raspberry Pi 4 / Raspberry Pi 5 (2GB/4GB/8GB)
+- NVIDIA Jetson Nano
+- Orange Pi / Rock Pi / Mini PCs
+
+**❌ Unsupported IoT Devices:**
+Microcontrollers with only kilobytes or megabytes of RAM do not have the capacity or OS support to run these models locally.
+- ESP32, ESP8266, Arduino boards, Raspberry Pi Pico
+- *Alternative:* If you want to use cheap $5 WiFi chips like the ESP32 as a "smart speaker", you must run Pocket Companion on a central server (like a Raspberry Pi 4) and use the ESP32 to stream microphone audio over Wi-Fi.
 
 ## Installation
 
