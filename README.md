@@ -109,6 +109,12 @@ Control the application by speaking directly to it:
 | "change voice to Luna"      | Switches TTS voice at runtime         |
 | "what model are you using"  | Companion speaks the current model    |
 
+## Documentation
+
+- [Architecture Overview](architecture.md)
+- [Frequently Asked Questions (FAQ)](FAQ.md)
+- [Project Roadmap](ROADMAP.md)
+
 ## Contributing
 
 We welcome contributions to Pocket Companion. See the [CONTRIBUTING.md](CONTRIBUTING.md) guide for guidelines on opening issues and PRs.

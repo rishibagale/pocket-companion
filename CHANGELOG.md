@@ -5,6 +5,17 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [0.2.0] — 2026-03-29
+
+### Added
+- Automated 1-Click setup scripts for Windows (`setup.bat`) and Linux/macOS (`setup.sh`)
+- Standalone python model downloader script (`download_models.py`)
+- New comprehensive documentation suite (`architecture.md`, `ROADMAP.md`, `FAQ.md`)
+- Detailed IoT Device compatibility matrix in `README.md`
+
+### Changed
+- `CONTRIBUTING.md` updated with emphasis on automated configuration over manual steps
+
 ## [0.1.0] — 2026-03-27
 
 ### Added

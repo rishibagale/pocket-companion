@@ -19,8 +19,9 @@ the feature — "I want X because Y" is much more useful than "add X".
 1. Fork the repo
 2. Create a branch: `git checkout -b feature/your-thing`
 3. Make focused changes — one concern per PR
-4. Test: `python main.py` must run without errors
-5. Open a PR against `main` with a clear description of what changed and why
+4. Test functionality on fresh setups using `setup.bat` (Windows) or `./setup.sh` (macOS/Linux)
+5. Test: `python main.py` must run without errors
+6. Open a PR against `main` with a clear description of what changed and why
 
 ## Code style
 

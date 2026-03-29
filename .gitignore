@@ -12,6 +12,7 @@ env/
 memory.json
 config.json
 *.log
+.env
 
 # Model caches
 .cache/
