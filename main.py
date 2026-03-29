@@ -17,12 +17,6 @@ def load_config():
 def main():
     config = load_config()
     
-    try:
-        if not LLM(config).check_connection():
-            print("Warning: Ollama connection could not be established immediately, proceeding anyway.")
-    except Exception:
-        pass
-
     llm = LLM(config)
     if not llm.check_connection():
          sys.exit("Error: Ollama is not running. Start it with: ollama serve")

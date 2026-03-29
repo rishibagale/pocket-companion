@@ -5,6 +5,14 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+- ROADMAP.md: updated to reflect the new feature approvals
+- README.md: added placeholder for missing demo.gif
+
+### Fixed
+- error handling: prevented bare exceptions across main.py, orchestrator.py, and download_models.py
+- config contract: added explicit pip install instructions to tts.py failure mode
+
 ## [0.2.0] — 2026-03-29
 
 ### Added

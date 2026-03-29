@@ -2,21 +2,25 @@
 
 Pocket Companion is currently in the `v0.x` pre-release phase. Below is a high-level roadmap of intended features prioritizing privacy and offline availability.
 
-### v0.x Phase (Current)
-- [x] Basic STT -> LLM -> TTS loop
-- [x] Persistent conversational memory
-- [x] Runtime voice commands ("stop listening", "change voice")
-- [x] Installer scripts for lightweight/IoT environments
-- [ ] Add streaming transcription chunks for zero-latency turn-taking
-- [ ] Automated memory pruning to prevent context overflow 
+## Feature roadmap (approved future work)
 
-### v1.0 Release
-- [ ] Full streaming audio pipeline (interrupting the companion by talking over them)
-- [ ] Multi-lingual localized prompting
-- [ ] Integration of Vision models (if camera hardware is present)
+### v0.2.0
+- `logger.py` — structured logging to companion.log with log rotation, replacing all print statements in orchestrator
+- Interrupt support — user can speak while TTS is playing to cut it off
+- `--voice` and `--model` CLI flags in main.py to override config at launch
 
-### Out of Scope
+### v0.3.0
+- Wake word detection — listen passively, only activate on trigger phrase (use pvporcupine or a simple keyword spotter)
+- `ROADMAP.md` — public roadmap file so contributors know what is planned
+
+### v0.4.0
+- Optional minimal GUI — tkinter window showing live transcript, mute button, voice selector dropdown
+- Auto-updater — check GitHub releases API for new version on startup, notify user if one exists (read-only, never auto-install)
+
+## Out of scope (do not implement)
 The following features are **not** planned:
-- Web-based GUI
-- Cloud LLM API fallbacks (e.g. OpenAI keys)
-- Web searching / internet access tools
+- Cloud LLM fallback
+- Docker / containers
+- Multi-user profiles
+- Web interface
+- Any feature requiring a network call to an external server

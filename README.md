@@ -6,7 +6,7 @@ Fully offline voice AI companion — speak naturally, get spoken replies. Runs o
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Offline](https://img.shields.io/badge/runs-offline-brightgreen)
 
-![Demo](demo.gif)
+*Demo GIF coming soon!*
 
 ## Quick start (1-Click Setup)
 

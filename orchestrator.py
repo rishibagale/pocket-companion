@@ -41,7 +41,8 @@ class Orchestrator:
             try:
                 with open(self.memory_file, 'r', encoding='utf-8') as f:
                     self.messages = json.load(f)
-            except Exception:
+            except Exception as e:
+                print(f"Warning: Could not load memory: {e}")
                 self.messages = []
         else:
             self.messages = []
@@ -61,8 +62,8 @@ class Orchestrator:
         if os.path.exists(self.memory_file):
             try:
                 os.remove(self.memory_file)
-            except Exception:
-                pass
+            except Exception as e:
+                print(f"Warning: Could not delete memory file: {e}")
 
     def set_voice(self, voice: str):
         self.config["voice"] = voice

@@ -9,7 +9,7 @@ class TTS:
             from kittentts import KittenTTS
             self.model = KittenTTS(model_name="KittenML/kitten-tts-mini-0.8")
         except ImportError:
-            raise ImportError("Error: KittenTTS not installed. See README for install instructions.")
+            raise ImportError("Error: KittenTTS not installed. Please run: pip install https://github.com/KittenML/KittenTTS/releases/download/0.8.1/kittentts-0.8.1-py3-none-any.whl")
 
     def speak(self, text: str, voice: str = None):
         self.speaking = True

@@ -48,8 +48,8 @@ def main():
                 config = json.load(f)
                 if "model" in config:
                     model_name = config["model"]
-        except Exception:
-            pass
+        except Exception as e:
+            print(f"Warning: Could not read config.json: {e}")
 
     print(f"Pulling '{model_name}' from Ollama...")
     print("Note: This step requires Ollama to be installed and running in the background.")
